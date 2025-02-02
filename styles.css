@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Geist mono';
+}
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.game-container {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.color-box {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  border: 2px solid #000;
+}
+
+.color-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.color-options button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color-options button:hover {
+  transform: scale(1.1);
+}
+
+.instructions {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.status {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #333;
+}
+
+.score {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.new-game-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.new-game-button:hover {
+  background-color: #0056b3;
+}
+
+/* Animations */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes celebrate {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.correct {
+  animation: celebrate 0.5s ease;
+}
+
+.wrong {
+  animation: fadeOut 0.5s ease;
+}
+
+@media screen and (max-width: 500px) {
+
+    .color-options{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        margin: 15px 0;
+    }
+}
