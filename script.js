@@ -1,3 +1,11 @@
+var loader = document.getElementById("loader-wrap");
+
+window.addEventListener("load", function () {
+  setTimeout(function () {
+    loader.style.display = "none";
+  }, 2000);
+});
+
 const colorBox = document.querySelector('[data-testid="colorBox"]');
 const colorOptions = document.querySelector('[data-testid="colorOptions"]');
 const gameStatus = document.querySelector('[data-testid="gameStatus"]');
